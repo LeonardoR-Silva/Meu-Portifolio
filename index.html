@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portifólio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#sobre" onclick="mostrarSecao(event, 'sobre')">Sobre Mim</a>
+            <a href="#formacao" onclick="mostrarSecao(event, 'formacao')">Formação</a>
+            <a href="#portifolio" onclick="mostrarSecao(event, 'portifolio')">Portifólio</a>
+            <a href="#contato" onclick="mostrarSecao(event, 'contato')">Contato</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!--Sobre Mim--->
+        <section id="sobre" class="ativo">
+            <h1>Sobre Mim</h1>
+
+            <h2>Apresentação</h2>
+            <p>Olá! Sou o Leonardo Rafael da Silva, possuo 28 anos, natural de Curitiba/PR. Sou estudante de Ciência de Dados, área que venho acompanhando desde 2019, quando tive meus primeiros contatos através de Data Analytics na NBA. Recentemente, iniciei meu primeiro estágio na área.</p>
+
+            <h2>Hobbies</h2>
+            <p>Sou apaixonado por Basquete, gosto muito de literatura de Ficção Científica e ouvir Podcasts sobre NBA, política (Internacional e Nacional) e ciências gerais.</p>
+
+            <h2>Esportes</h2>
+            <p>Pratico musculação, corrida e principalmente Basquete. O basquete está comigo desde meus 12 anos, participando de alguns torneios amadores.</p>
+
+            <h2>Livros Preferidos</h2>
+            <div class="info-box">
+                <p><strong>"Cama de Gato"</strong> - Kurt Vonnegut.</p>
+                <p><strong>"Fundação"</strong> - Isaac Asimov.</p>
+                <p><strong>"Frankenstein"</strong> - Mary Shelley.</p>
+            </div>
+        </section>
+
+        <!--Formação-->
+        <section id="formacao">
+            <h1>Formação</h1>
+
+            <h2>Acadêmica</h2>
+            <div class="info-box">
+                <p><strong>Tecnologia em Ciência de Dados (Cursando)</strong></p>
+                <p>Uninter</p>
+            </div>
+
+            <h2>Cursos Complementares</h2>
+            <div class="info-box">
+                <p>✓ Power BI - Alura (2025)</p>
+                <p>✓ MySQL - Alura (2025)</p>
+                <p>✓ Machine Learning - Alura (2022)</p>
+                <p>✓ Data Science - Alura (2021)</p>
+            </div>
+        </section>
+
+        <!---Portifólio-->
+        <section id="portifolio">
+            <h1>Portifólio</h1>
+
+            <p>Acesso para meu portifólio via o link:</p>
+            <p style="margin-top: 30px;"><strong>Projetos no GitHub:</strong> <a href="https://github.com/LeonardoR-Silva" target="_blank">github.com/LeonardoR-Silva</a></p>
+        </section>
+
+        <!--Contato-->
+        <section id="contato">
+            <h1>Contato</h1>
+
+            <p>Algum comentário, sugestão ou outro assunto? Envie uma mensagem!</p>
+            <!--Formulario de envio-->
+            <form id="formulario" style="max-width: 600px; margin: 30px 0;">
+                <div class="form-group">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" placeholder="Seu nome completo">
+                    <div class="erro-msg" id="erro-nome">Por favor, preencha o nome.</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" placeholder="seu.email@exemplo.com">
+                    <div class="erro-msg" id="erro-email">Por favor, preencha um e-mail válido.</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" rows="6" placeholder="Sua mensagem aqui..."></textarea>
+                    <div class="erro-msg" id="erro-mensagem">Por favor, preencha a mensagem.</div>
+                </div>
+
+                <button type="submit">Enviar Mensagem</button>
+            </form>
+        </section>
+    </div>
+
+    <!-- Modal de sucesso de envio de mensagem-->
+    <div id="modal" class="modal">
+        <div class="modal-conteudo">
+            <h2>✓ Sucesso!</h2>
+            <p>Sua mensagem foi enviada com sucesso! Em breve retorno seu contato.</p>
+            <button class="modal-btn" onclick="fecharModal()">Fechar</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
